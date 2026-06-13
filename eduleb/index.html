@@ -20,15 +20,18 @@
 	<link rel="stylesheet" href="assets/css/magnific-popup.css">
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<style>
+		.kidshare-note{margin-top:14px;color:#555;font-size:16px;}
+		.kidshare-progress-wrap{max-width:900px;margin:0 auto;}
+		.kidshare-progress-label{font-weight:700;margin-bottom:8px;color:#060a3d;}
+		.progress{border-radius:8px;overflow:hidden;background:#e9ecef;}
+		.progress-bar{font-weight:700;}
+	</style>
 </head>
 
 <body data-spy="scroll" data-offset="80">
 
-	<!-- START PRELOADER -->
-	<div class="preloaders">
-		<span class="loader"></span>
-	</div>
-	<!-- END PRELOADER -->
+	<div class="preloaders"><span class="loader"></span></div>
 
 	<!-- START NAVBAR -->
 	<div id="navigation" class="navbar-light bg-faded site-navigation">
@@ -72,27 +75,32 @@
 	<!-- END NAVBAR -->
 
 	<!-- START HOME -->
-	<section class="home_bg hb_height" style="background-image: url(assets/img/bg/home-bg.jpg); background-size:cover; background-position:center center;">
+	<section class="home_bg hb_height" style="background-image:url(assets/img/bg/home-bg.jpg);background-size:cover;background-position:center center;">
 		<div class="container">
-			<div class="row">
+			<div class="row align-items-center">
 				<div class="col-lg-6 col-sm-12 col-xs-12">
 					<div class="hero-text ht_top">
 						<h1><span>KidShare</span> Çocuk Eşyaları Yeniden Değer Kazanıyor</h1>
-						<p>
-							Çocuk kıyafetleri, oyuncaklar, kitaplar ve eğitim materyalleri şehir bazlı anonim paylaşım sistemiyle ihtiyaç sahibi ailelere ulaştırılır. Sosyal dayanışmayı güçlendiren sürdürülebilir bir paylaşım ağı.
-						</p>
+						<p>Çocuk kıyafetleri, oyuncaklar, kitaplar ve eğitim materyalleri şehir bazlı anonim paylaşım sistemiyle ihtiyaç sahibi ailelere ulaştırılır. Sosyal dayanışmayı güçlendiren sürdürülebilir bir paylaşım ağı.</p>
 					</div>
 
 					<div class="home_sb">
-						<form action="#" class="banner_subs">
-							<select class="form-control home_si">
-								<option>Samsun</option>
-								<option>Ankara</option>
+						<form action="blog.html" class="banner_subs">
+							<select class="form-control home_si" name="sehir">
+								<option>Şehir Seçiniz</option>
 								<option>İstanbul</option>
+								<option>Ankara</option>
+								<option>İzmir</option>
+								<option>Bursa</option>
+								<option>Antalya</option>
+								<option>Gaziantep</option>
+								<option>Samsun</option>
+								<option>Trabzon</option>
 							</select>
-							<button type="button" class="subscribe__btn">Şehir Seç <i class="fa fa-paper-plane-o"></i></button>
+							<button type="submit" class="subscribe__btn">Merkezleri Gör <i class="fa fa-paper-plane-o"></i></button>
 						</form>
 					</div>
+					<p class="kidshare-note">📍 Şehir seçerek ilgili dağıtım merkezleri sayfasına geçebilirsiniz.</p>
 				</div>
 
 				<div class="col-lg-6 col-sm-12 col-xs-12">
@@ -109,278 +117,74 @@
 	<section class="count_area counter_feature">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-12">
-					<div class="single-counter">
-						<span class="ti-folder sc_one"></span>
-						<h2 class="counter-num">134</h2>
-						<p>Paylaşılan Ürün</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-12">
-					<div class="single-counter">
-						<span class="ti-medall-alt sc_two"></span>
-						<h2 class="counter-num">18</h2>
-						<p>Aktif Merkez</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-12">
-					<div class="single-counter">
-						<span class="ti-id-badge sc_three"></span>
-						<h2 class="counter-num">42</h2>
-						<p>Desteklenen Aile</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-12">
-					<div class="single-counter">
-						<span class="ti-user sc_four"></span>
-						<h2 class="counter-num">356</h2>
-						<p>Kg CO₂ Tasarrufu</p>
-					</div>
-				</div>
+				<div class="col-lg-3 col-sm-6 col-xs-12"><div class="single-counter"><span class="ti-folder sc_one"></span><h2 class="counter-num">134</h2><p>Paylaşılan Ürün</p></div></div>
+				<div class="col-lg-3 col-sm-6 col-xs-12"><div class="single-counter"><span class="ti-medall-alt sc_two"></span><h2 class="counter-num">18</h2><p>Aktif Merkez</p></div></div>
+				<div class="col-lg-3 col-sm-6 col-xs-12"><div class="single-counter"><span class="ti-id-badge sc_three"></span><h2 class="counter-num">42</h2><p>Desteklenen Aile</p></div></div>
+				<div class="col-lg-3 col-sm-6 col-xs-12"><div class="single-counter"><span class="ti-user sc_four"></span><h2 class="counter-num">356</h2><p>Kg CO₂ Tasarrufu</p></div></div>
 			</div>
 		</div>
 	</section>
 	<!-- END COUNTER -->
 
-	<!-- START CATEGORY PREVIEW -->
-	<section class="top_cat__area section-padding" style="background-image:url(assets/img/bg/section-2.jpg); background-size:cover; background-position:center center;">
+	<!-- START CATEGORY FILTER -->
+	<section class="top_cat__area section-padding" style="background-image:url(assets/img/bg/section-2.jpg);background-size:cover;background-position:center center;">
 		<div class="container">
 			<div class="section-title text-center">
-				<h2>KidShare Kategorileri</h2>
-				<p>Çocuk ürünlerini kategori bazında inceleyebilir ve uygun dağıtım noktalarına yönlenebilirsiniz.</p>
+				<h2>Şehir ve Kategori Filtresi</h2>
+				<p>İhtiyaç duyulan çocuk ürünlerini kategori bazında inceleyebilir, uygun dağıtım merkezlerine yönlenebilirsiniz.</p>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-3 col-sm-6 col-xs-12"><div class="single_tp"><span class="sc_one">01</span><h3>Bebek <br>Giyim</h3><p>0-3 yaş bebek kıyafetleri ve temel ihtiyaç ürünleri.</p></div></div>
+				<div class="col-lg-3 col-sm-6 col-xs-12"><div class="single_tp"><span class="sc_two">02</span><h3>Oyuncak <br>Paylaşımı</h3><p>Kullanılabilir oyuncakların yeniden değerlendirilmesi.</p></div></div>
+				<div class="col-lg-3 col-sm-6 col-xs-12"><div class="single_tp"><span class="sc_three">03</span><h3>Çocuk <br>Kitapları</h3><p>Hikaye kitapları ve eğitim içerikleri.</p></div></div>
+				<div class="col-lg-3 col-sm-6 col-xs-12"><div class="single_tp"><span class="sc_four">04</span><h3>Eğitim <br>Materyalleri</h3><p>Defter, kalem, etkinlik setleri ve okul materyalleri.</p></div></div>
+			</div>
+
+			<div class="text-center mt-4"><a href="course.html" class="btn_one">Tüm Kategorileri Gör <i class="ti-arrow-top-right"></i></a></div>
+		</div>
+	</section>
+	<!-- END CATEGORY FILTER -->
+
+	<!-- START DISTRIBUTION CENTERS PREVIEW -->
+	<section class="home_course section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-sm-6 col-xs-12"><div class="section-title"><h2>Merkezi <b>Askı Noktaları</b></h2><p>Türkiye genelindeki örnek dağıtım merkezleri.</p></div></div>
+				<div class="col-lg-4 col-sm-6 col-xs-12"><div class="cour_btn"><a href="blog.html" class="btn_one">Tüm Merkezleri Gör <i class="ti-arrow-top-right"></i></a></div></div>
 			</div>
 			<div class="row">
-				<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
-					<div class="single_tp">
-						<span class="sc_one">01</span>
-						<h3>Bebek <br>Giyim</h3>
-						<p>0-3 yaş bebek kıyafetleri ve temel ihtiyaç ürünleri.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
-					<div class="single_tp">
-						<span class="sc_two">02</span>
-						<h3>Oyuncak <br>Paylaşımı</h3>
-						<p>Kullanılabilir oyuncakların yeniden değerlendirilmesi.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s" data-wow-offset="0">
-					<div class="single_tp">
-						<span class="sc_three">03</span>
-						<h3>Çocuk <br>Kitapları</h3>
-						<p>Hikaye kitapları ve eğitim içerikleri.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" data-wow-offset="0">
-					<div class="single_tp">
-						<span class="sc_four">04</span>
-						<h3>Eğitim <br>Materyalleri</h3>
-						<p>Defter, kalem, etkinlik setleri ve okul materyalleri.</p>
-					</div>
-				</div>
+				<div class="col-lg-4 col-sm-6 col-xs-12"><div class="single_course"><div class="single_c_img"><img src="assets/img/course/1.png" class="img-fluid" alt="Samsun Dağıtım Merkezi"><span>Samsun / Atakum</span></div><h4><a href="blog.html">Atakum Belediye Şubesi</a></h4><p><span class="ti-map"></span> 143 Atakum Meydan Sokak</p><p><span class="ti-alarm-clock"></span> 09:00 - 18:00</p><div class="price">Aktif Stok: 25 Ürün</div></div></div>
+				<div class="col-lg-4 col-sm-6 col-xs-12"><div class="single_course"><div class="single_c_img"><img src="assets/img/course/2.png" class="img-fluid" alt="Ankara Dağıtım Merkezi"><span>Ankara / Çankaya</span></div><h4><a href="blog.html">Çankaya Paylaşım Noktası</a></h4><p><span class="ti-map"></span> Merkez Mahallesi</p><p><span class="ti-alarm-clock"></span> 10:00 - 17:00</p><div class="price">Aktif Stok: 18 Ürün</div></div></div>
+				<div class="col-lg-4 col-sm-6 col-xs-12"><div class="single_course"><div class="single_c_img"><img src="assets/img/course/3.png" class="img-fluid" alt="İstanbul Dağıtım Merkezi"><span>İstanbul / Kadıköy</span></div><h4><a href="blog.html">Kadıköy Gönüllü Merkezi</a></h4><p><span class="ti-map"></span> Eğitim Mahallesi</p><p><span class="ti-alarm-clock"></span> 09:30 - 18:30</p><div class="price">Aktif Stok: 31 Ürün</div></div></div>
 			</div>
 		</div>
 	</section>
-	<!-- END CATEGORY PREVIEW -->
-
-	<!-- START PRODUCT GROUPS -->
-	<section class="top_cat__area section-padding" style="background-image:url(assets/img/bg/shape-1.png); background-size:cover; background-position:center center;">
-		<div class="container">
-			<div class="section-title text-center">
-				<h2>Desteklenen Ürün Grupları</h2>
-				<p>KidShare platformunda paylaşılabilecek çocuk ürünleri aşağıda listelenmiştir.</p>
-			</div>
-			<div class="row">
-				<div class="col-lg-12 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-					<div class="cat_list">
-						<ul>
-							<li><a href="course.html"><img src="assets/img/e1.png" alt="Bebek Giyim"> Bebek Giyim</a></li>
-							<li><a href="course.html"><img src="assets/img/e2.png" alt="Çocuk Kıyafeti"> Çocuk Kıyafeti</a></li>
-							<li><a href="course.html"><img src="assets/img/e3.png" alt="Oyuncak"> Oyuncak</a></li>
-							<li><a href="course.html"><img src="assets/img/e4.png" alt="Kitap"> Kitap</a></li>
-							<li><a href="course.html"><img src="assets/img/e5.png" alt="Eğitim Materyali"> Eğitim Materyali</a></li>
-							<li><a href="course.html"><img src="assets/img/e6.png" alt="Ayakkabı"> Ayakkabı</a></li>
-							<li><a href="course.html"><img src="assets/img/e7.png" alt="Bebek Bakım Ürünleri"> Bebek Bakım Ürünleri</a></li>
-							<li><a href="course.html"><img src="assets/img/e8.png" alt="Okul Çantası"> Okul Çantası</a></li>
-							<li><a href="course.html"><img src="assets/img/e9.png" alt="Kırtasiye"> Kırtasiye</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- END PRODUCT GROUPS -->
-
-	<!-- START DISTRIBUTION CENTERS -->
-<section class="home_course section-padding">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-sm-6 col-xs-12">
-				<div class="section-title">
-					<h2>Şehir Bazlı <b>Dağıtım Merkezleri</b></h2>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-sm-6 col-xs-12">
-				<div class="cour_btn">
-					<a href="blog.html" class="btn_one">Tüm Merkezleri Gör <i class="ti-arrow-top-right"></i></a>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-
-			<div class="col-lg-4 col-sm-6 col-xs-12">
-				<div class="single_course">
-					<div class="single_c_img">
-						<img src="assets/img/course/1.png" class="img-fluid" alt="Samsun Dağıtım Merkezi">
-						<span>Samsun / Atakum</span>
-					</div>
-					<h4><a href="blog.html">Atakum Gönüllü Dağıtım Merkezi</a></h4>
-					<p><span class="ti-map"></span> Cumhuriyet Mahallesi, Atakum</p>
-					<p><span class="ti-alarm-clock"></span> 09:00 - 18:00</p>
-					<div class="price">Aktif Stok: 25 Ürün</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-sm-6 col-xs-12">
-				<div class="single_course">
-					<div class="single_c_img">
-						<img src="assets/img/course/2.png" class="img-fluid" alt="Ankara Dağıtım Merkezi">
-						<span>Ankara / Çankaya</span>
-					</div>
-					<h4><a href="blog.html">Çankaya Paylaşım Noktası</a></h4>
-					<p><span class="ti-map"></span> Merkez Mahallesi, Çankaya</p>
-					<p><span class="ti-alarm-clock"></span> 10:00 - 17:00</p>
-					<div class="price">Aktif Stok: 18 Ürün</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-sm-6 col-xs-12">
-				<div class="single_course">
-					<div class="single_c_img">
-						<img src="assets/img/course/3.png" class="img-fluid" alt="İstanbul Dağıtım Merkezi">
-						<span>İstanbul / Kadıköy</span>
-					</div>
-					<h4><a href="blog.html">Kadıköy Gönüllü Merkezi</a></h4>
-					<p><span class="ti-map"></span> Eğitim Mahallesi, Kadıköy</p>
-					<p><span class="ti-alarm-clock"></span> 09:30 - 18:30</p>
-					<div class="price">Aktif Stok: 31 Ürün</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-sm-6 col-xs-12">
-				<div class="single_course">
-					<div class="single_c_img">
-						<img src="assets/img/course/1.png" class="img-fluid" alt="İzmir Dağıtım Merkezi">
-						<span>İzmir / Bornova</span>
-					</div>
-					<h4><a href="blog.html">Bornova Destek Merkezi</a></h4>
-					<p><span class="ti-map"></span> Kazımdirik Mahallesi</p>
-					<p><span class="ti-alarm-clock"></span> 09:00 - 18:00</p>
-					<div class="price">Aktif Stok: 22 Ürün</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-sm-6 col-xs-12">
-				<div class="single_course">
-					<div class="single_c_img">
-						<img src="assets/img/course/2.png" class="img-fluid" alt="Bursa Dağıtım Merkezi">
-						<span>Bursa / Nilüfer</span>
-					</div>
-					<h4><a href="blog.html">Nilüfer Paylaşım Noktası</a></h4>
-					<p><span class="ti-map"></span> Ataevler Mahallesi</p>
-					<p><span class="ti-alarm-clock"></span> 08:30 - 17:30</p>
-					<div class="price">Aktif Stok: 16 Ürün</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-sm-6 col-xs-12">
-				<div class="single_course">
-					<div class="single_c_img">
-						<img src="assets/img/course/3.png" class="img-fluid" alt="Antalya Dağıtım Merkezi">
-						<span>Antalya / Muratpaşa</span>
-					</div>
-					<h4><a href="blog.html">Muratpaşa Gönüllü Merkezi</a></h4>
-					<p><span class="ti-map"></span> Güzeloba Mahallesi</p>
-					<p><span class="ti-alarm-clock"></span> 09:00 - 18:00</p>
-					<div class="price">Aktif Stok: 28 Ürün</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-sm-6 col-xs-12">
-				<div class="single_course">
-					<div class="single_c_img">
-						<img src="assets/img/course/1.png" class="img-fluid" alt="Gaziantep Dağıtım Merkezi">
-						<span>Gaziantep / Şahinbey</span>
-					</div>
-					<h4><a href="blog.html">Şahinbey Yardım Merkezi</a></h4>
-					<p><span class="ti-map"></span> Karataş Mahallesi</p>
-					<p><span class="ti-alarm-clock"></span> 09:00 - 17:00</p>
-					<div class="price">Aktif Stok: 19 Ürün</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-sm-6 col-xs-12">
-				<div class="single_course">
-					<div class="single_c_img">
-						<img src="assets/img/course/2.png" class="img-fluid" alt="Trabzon Dağıtım Merkezi">
-						<span>Trabzon / Ortahisar</span>
-					</div>
-					<h4><a href="blog.html">Ortahisar Dağıtım Merkezi</a></h4>
-					<p><span class="ti-map"></span> Yenicuma Mahallesi</p>
-					<p><span class="ti-alarm-clock"></span> 09:00 - 18:00</p>
-					<div class="price">Aktif Stok: 21 Ürün</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</section>
-	<!-- END DISTRIBUTION CENTERS -->
+	<!-- END DISTRIBUTION CENTERS PREVIEW -->
 
 	<!-- START DONATE FORM -->
 	<section class="ab_area section-padding">
 		<div class="container">
-			<div class="row">
+			<div class="row align-items-center">
 				<div class="col-lg-6 col-sm-12 col-xs-12">
 					<div class="ab_content">
 						<h2>Anonim Paylaşım Talebi</h2>
 						<p>KidShare üzerinden kullanılabilir durumdaki çocuk ürünlerini kişisel bilgi paylaşmadan sisteme bildirebilirsiniz.</p>
-						<p><b>Paylaşım talepleri anonim olarak alınır ve uygun dağıtım merkezlerine yönlendirilir.</b></p>
+						<p><b>Kullanıcı adı veya profil bilgisi gerekmez. Paylaşım talepleri anonim olarak alınır.</b></p>
+						<ul>
+							<li><span class="ti-check"></span> Kişisel profil bilgisi istenmez.</li>
+							<li><span class="ti-check"></span> Ürünler şehir bazlı merkezlere bırakılır.</li>
+							<li><span class="ti-check"></span> Destek süreci anonim yürütülür.</li>
+						</ul>
 					</div>
 				</div>
 
 				<div class="col-lg-6 col-sm-12 col-xs-12">
 					<form action="#" class="contact">
-						<div class="form-group">
-							<select class="form-control">
-								<option>Paylaşılacak Ürün Türünü Seçiniz</option>
-								<option>Bebek Giyim</option>
-								<option>Çocuk Kıyafeti</option>
-								<option>Oyuncak</option>
-								<option>Kitap</option>
-								<option>Eğitim Materyali</option>
-								<option>Ayakkabı</option>
-							</select>
-						</div>
-
-						<div class="form-group">
-							<input type="number" class="form-control" placeholder="Ürün Adedi">
-						</div>
-
-						<div class="form-group">
-							<select class="form-control">
-								<option>Teslim Noktası Seçiniz</option>
-								<option>Atakum Gönüllü Dağıtım Merkezi</option>
-								<option>Çankaya Paylaşım Noktası</option>
-								<option>Kadıköy Gönüllü Merkezi</option>
-							</select>
-						</div>
-
-				<button type="button" class="btn_one" onclick="kidshareBildirimGonder()">
-	Paylaşım Talebi Gönder
-</button>
+						<div class="form-group"><select class="form-control" id="urunSec"><option>Paylaşılacak Ürün Türünü Seçiniz</option><option>Bebek Giyim</option><option>Çocuk Kıyafeti</option><option>Oyuncak</option><option>Kitap</option><option>Eğitim Materyali</option><option>Ayakkabı</option></select></div>
+						<div class="form-group"><input type="number" class="form-control" placeholder="Ürün Adedi"></div>
+						<div class="form-group"><select class="form-control"><option>Teslim Noktası Seçiniz</option><option>Samsun / Atakum Belediye Şubesi</option><option>Ankara / Çankaya Paylaşım Noktası</option><option>İstanbul / Kadıköy Gönüllü Merkezi</option></select></div>
+						<button type="button" class="btn_one" onclick="kidshareBildirimGonder()">Paylaşım Talebi Gönder</button>
 					</form>
 				</div>
 			</div>
@@ -388,51 +192,18 @@
 	</section>
 	<!-- END DONATE FORM -->
 
-	<!-- START ECO IMPACT -->
-	<section class="blog_area section-padding">
+	<!-- START ECO COUNTER -->
+	<section class="count_area section-padding">
 		<div class="container">
-			<div class="section-title text-center">
-				<h2>KidShare Çevresel Etki Raporu</h2>
-				<p>KidShare ile yeniden kullanılan ürünler sayesinde hem ailelere destek olunur hem de karbon salınımı azaltılır.</p>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-4 col-sm-4 col-xs-12">
-					<div class="single_blog">
-						<img src="assets/img/blog/1.jpg" class="img-fluid" alt="Karbon Tasarrufu">
-						<div class="content_box">
-							<span>🌱 Çevresel Fayda</span>
-							<h2>356 Kg CO₂ Tasarrufu</h2>
-							<p>Yeniden kullanılan ürünler sayesinde karbon salınımı azaltıldı.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-sm-4 col-xs-12">
-					<div class="single_blog">
-						<img src="assets/img/blog/2.jpg" class="img-fluid" alt="Yeniden Kullanım">
-						<div class="content_box">
-							<span>♻️ Yeniden Kullanım</span>
-							<h2>134 Ürün Değerlendirildi</h2>
-							<p>Kıyafet, oyuncak ve kitaplar tekrar kullanıma kazandırıldı.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-sm-4 col-xs-12">
-					<div class="single_blog">
-						<img src="assets/img/blog/3.jpg" class="img-fluid" alt="Sosyal Destek">
-						<div class="content_box">
-							<span>👨‍👩‍👧‍👦 Sosyal Destek</span>
-							<h2>42 Aile Desteklendi</h2>
-							<p>İhtiyaç sahibi ailelere çocuk ürünleri ulaştırıldı.</p>
-						</div>
-					</div>
-				</div>
+			<div class="section-title text-center"><h2>KidShare Çevresel Etki Sayacı</h2><p>Paylaşılan ürünler sayesinde oluşan çevresel ve sosyal fayda.</p></div>
+			<div class="kidshare-progress-wrap">
+				<div class="kidshare-progress-label">Karbon Tasarrufu</div><div class="progress mb-4" style="height:25px;"><div class="progress-bar bg-success" role="progressbar" style="width:75%;">356 Kg CO₂</div></div>
+				<div class="kidshare-progress-label">İhtiyaç Sahibi Ailelere Ulaşım</div><div class="progress mb-4" style="height:25px;"><div class="progress-bar bg-primary" role="progressbar" style="width:60%;">42 Aile</div></div>
+				<div class="kidshare-progress-label">Yeniden Kullanılan Ürünler</div><div class="progress" style="height:25px;"><div class="progress-bar bg-warning" role="progressbar" style="width:85%;">134 Ürün</div></div>
 			</div>
 		</div>
 	</section>
-	<!-- END ECO IMPACT -->
+	<!-- END ECO COUNTER -->
 
 	<!-- START FOOTER -->
 	<div class="footer section-padding">
@@ -446,13 +217,7 @@
 	</div>
 	<!-- END FOOTER -->
 
-	<!-- START COPYRIGHT -->
-	<div class="foot_copy">
-		<div class="footer_copyright">
-			<p>© 2026 KidShare | Tüm Hakları Saklıdır.</p>
-		</div>
-	</div>
-	<!-- END COPYRIGHT -->
+	<div class="foot_copy"><div class="footer_copyright"><p>© 2026 KidShare | Tüm Hakları Saklıdır.</p></div></div>
 
 	<script src="assets/js/jquery-1.12.4.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -465,16 +230,14 @@
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 	<script>
-function kidshareBildirimGonder() {
-    let urun = document.querySelector('.contact select').value;
-
-    if (urun === "Paylaşılacak Ürün Türünü Seçiniz") {
-        alert("Lütfen paylaşmak istediğiniz ürün türünü seçiniz.");
-        return;
-    }
-
-    alert("Paylaşım talebiniz başarıyla alınmıştır. Teşekkür ederiz.");
-}
-</script>
+		function kidshareBildirimGonder() {
+			let urun = document.getElementById("urunSec").value;
+			if (urun === "Paylaşılacak Ürün Türünü Seçiniz") {
+				alert("Lütfen paylaşmak istediğiniz ürün türünü seçiniz.");
+				return;
+			}
+			alert("Paylaşım talebiniz başarıyla alınmıştır. Teşekkür ederiz.");
+		}
+	</script>
 </body>
 </html>
