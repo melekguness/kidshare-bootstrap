@@ -547,7 +547,12 @@ border: 1px solid #525fe1!important;
 	bottom: 0;
 	right:5%;
 }
-.hero-text-img img{position:relative;}
+.hero-text-img img{
+    position: relative;
+    height: 580px;
+    width: auto;
+    object-fit: contain;
+}
 @media only screen and (max-width:960px) { 
 .hero-text-img img{display:none;}
 }
