@@ -141,7 +141,51 @@
 		</div>
 	</section>
 	<!-- END COUNTER -->
+<!-- START ECO COUNTER -->
+<section class="count_area section-padding">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>KidShare Çevresel Etki Sayacı</h2>
+            <p>
+                Paylaşılan ürünler sayesinde oluşan çevresel ve sosyal fayda.
+            </p>
+        </div>
 
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+
+                <h5>Karbon Tasarrufu</h5>
+                <div class="progress mb-4" style="height:25px;">
+                    <div class="progress-bar bg-success"
+                         role="progressbar"
+                         style="width:75%;">
+                        356 Kg CO₂
+                    </div>
+                </div>
+
+                <h5>İhtiyaç Sahibi Ailelere Ulaşım</h5>
+                <div class="progress mb-4" style="height:25px;">
+                    <div class="progress-bar bg-primary"
+                         role="progressbar"
+                         style="width:60%;">
+                        42 Aile
+                    </div>
+                </div>
+
+                <h5>Yeniden Kullanılan Ürünler</h5>
+                <div class="progress" style="height:25px;">
+                    <div class="progress-bar bg-warning"
+                         role="progressbar"
+                         style="width:85%;">
+                        134 Ürün
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END ECO COUNTER -->
 	<!-- START CATEGORY PREVIEW -->
 	<section class="top_cat__area section-padding" style="background-image:url(assets/img/bg/section-2.jpg); background-size:cover; background-position:center center;">
 		<div class="container">
@@ -277,9 +321,9 @@
 			<div class="row">
 				<div class="col-lg-6 col-sm-12 col-xs-12">
 					<div class="ab_content">
-						<h2>Anonim Eşya Bildirim Paneli</h2>
-						<p>KidShare üzerinden çocuk kıyafeti, oyuncak, kitap, ayakkabı ve eğitim materyallerini kişisel bilgi paylaşmadan sisteme bildirebilirsiniz.</p>
-						<p><b>Kullanıcı adı veya profil bilgisi gerekmez. Bildirimler anonim olarak alınır.</b></p>
+						<h2>Anonim Paylaşım Talebi</h2>
+						<p>KidShare üzerinden kullanılabilir durumdaki çocuk ürünlerini kişisel bilgi paylaşmadan sisteme bildirebilirsiniz.</p>
+						<p><b>Paylaşım talepleri anonim olarak alınır ve uygun dağıtım merkezlerine yönlendirilir.</b></p>
 					</div>
 				</div>
 
@@ -287,7 +331,7 @@
 					<form action="#" class="contact">
 						<div class="form-group">
 							<select class="form-control">
-								<option>Eşya Türü Seçiniz</option>
+								<option>Paylaşılacak Ürün Türünü Seçiniz</option>
 								<option>Bebek Giyim</option>
 								<option>Çocuk Kıyafeti</option>
 								<option>Oyuncak</option>
@@ -298,7 +342,7 @@
 						</div>
 
 						<div class="form-group">
-							<input type="number" class="form-control" placeholder="Adet Giriniz">
+							<input type="number" class="form-control" placeholder="Ürün Adedi">
 						</div>
 
 						<div class="form-group">
@@ -310,7 +354,9 @@
 							</select>
 						</div>
 
-						<a href="course_details.html" class="btn_one">Eşya Bildirimi Gönder</a>
+				<button type="button" class="btn_one" onclick="kidshareBildirimGonder()">
+	Paylaşım Talebi Gönder
+</button>
 					</form>
 				</div>
 			</div>
@@ -394,5 +440,17 @@
 	<script src="assets/js/scrolltopcontrol.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
+	<script>
+function kidshareBildirimGonder() {
+    let urun = document.querySelector('.contact select').value;
+
+    if (urun === "Paylaşılacak Ürün Türünü Seçiniz") {
+        alert("Lütfen paylaşmak istediğiniz ürün türünü seçiniz.");
+        return;
+    }
+
+    alert("Paylaşım talebiniz başarıyla alınmıştır. Teşekkür ederiz.");
+}
+</script>
 </body>
 </html>
