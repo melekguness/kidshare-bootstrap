@@ -85,21 +85,24 @@
 					</div>
 
 					<div class="home_sb">
-						<form action="blog.html" class="banner_subs">
-							<select class="form-control home_si" name="sehir">
-								<option>Şehir Seçiniz</option>
-								<option>İstanbul</option>
-								<option>Ankara</option>
-								<option>İzmir</option>
-								<option>Bursa</option>
-								<option>Antalya</option>
-								<option>Gaziantep</option>
-								<option>Samsun</option>
-								<option>Trabzon</option>
-							</select>
-							<button type="submit" class="subscribe__btn">Merkezleri Gör <i class="fa fa-paper-plane-o"></i></button>
-						</form>
-					</div>
+	<form action="blog.html" method="get" class="banner_subs">
+		<select class="form-control home_si" name="sehir" required>
+			<option value="">Şehir Seçiniz</option>
+			<option value="istanbul">İstanbul</option>
+			<option value="ankara">Ankara</option>
+			<option value="izmir">İzmir</option>
+			<option value="bursa">Bursa</option>
+			<option value="antalya">Antalya</option>
+			<option value="gaziantep">Gaziantep</option>
+			<option value="samsun">Samsun</option>
+			<option value="trabzon">Trabzon</option>
+		</select>
+
+		<button type="submit" class="subscribe__btn">
+			Merkezleri Gör <i class="fa fa-paper-plane-o"></i>
+		</button>
+	</form>
+</div>
 					<p class="kidshare-note">📍 Şehir seçerek ilgili dağıtım merkezleri sayfasına geçebilirsiniz.</p>
 				</div>
 
