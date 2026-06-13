@@ -7,10 +7,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<meta name="description" content="Eduleb - Education HTML Template">
+		<meta name="description" content="KidShare - Şehir Bazlı Anonim Çocuk Eşyası Paylaşım Platformu">
 		<meta name="keywords" content="agency, business, corporate, creative, html5, modern, multipurpose, One Page, parallax, startup">		
 		<!-- SITE TITLE -->
-		<title>Eduleb - Education HTML Template</title>			
+		<title>KidShare - İletişim</title>			
 		<!-- Latest Bootstrap min CSS -->
 		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">		
 		<!-- Google Font -->
@@ -59,27 +59,27 @@
 			<div class="col-60 d-flex">
 				<nav id="main-menu">
 					<ul>
-						<li><a href="index.html">Ana Sayfa</a></li>
-						<li><a href="about.html">Hakkımızda</a></li>
-						<li><a href="course.html">Kategoriler</a></li>
-						<li><a href="blog.html">Dağıtım Merkezleri</a></li>
-						<li><a href="course_details.html">Eşya Bırak</a></li>
-						<li><a href="contact.html">İletişim</a></li>
+					<li><a href="index.html">Ana Sayfa</a></li>
+<li><a href="index.html#about">Hakkımızda</a></li>
+<li><a href="index.html#categories">Kategoriler</a></li>
+<li><a href="index.html#centers">Dağıtım Merkezleri</a></li>
+<li><a href="index.html#donate">Eşya Bırak</a></li>
+<li><a href="contact.html">İletişim</a></li>
 					</ul>
 				</nav>
 			</div>
 
 			<div class="col-20 d-none d-xl-block text-end align-self-center">
-				<a href="blog.html" class="header-btn">Merkezler</a>
-				<a href="course_details.html" class="btn_one">Eşya Bırak</a>
+				<a href="index.html#centers" class="header-btn">Merkezler</a>
+				<a href="index.html#donate" class="btn_one">Eşya Bırak</a>
 			</div>
 
-			<ul class="mobile_menu">						
+			<ul class="mobile_menu">
 				<li><a href="index.html">Ana Sayfa</a></li>
-				<li><a href="about.html">Hakkımızda</a></li>
-				<li><a href="course.html">Kategoriler</a></li>
-				<li><a href="blog.html">Dağıtım Merkezleri</a></li>
-				<li><a href="course_details.html">Eşya Bırak</a></li>
+				<li><a href="index.html#about">Hakkımızda</a></li>
+				<li><a href="index.html#categories">Kategoriler</a></li>
+				<li><a href="index.html#centers">Dağıtım Merkezleri</a></li>
+				<li><a href="index.html#donate">Eşya Bırak</a></li>
 				<li><a href="contact.html">İletişim</a></li>
 			</ul>
 		</div>
@@ -93,8 +93,8 @@
 					<div class="section-top-title wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
 						<h1>İletişim</h1>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li> Ana Sayfa / İletişim</li>
+							<li><a href="index.html">Ana Sayfa</a></li>
+							<li>İletişim</li>
 						</ul>
 					</div><!-- //.HERO-TEXT -->
 				</div><!--- END COL -->
@@ -109,15 +109,15 @@
 					<div class="col-lg-4 col-sm-4 col-xs-12 no-padding wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
 						<div class="single_address sa_one">
 							<i class="ti-map"></i>
-							<h4>Dağıtım Merkezi</h4>
-							<p>Cumhuriyet Mahallesi Atakum / Samsun</p>
+							<h4>Türkiye Geneli Hizmet Ağı</h4>
+							<p>Şehir bazlı gönüllü dağıtım merkezleri</p>
 						</div>
 					</div><!-- END COL -->
 					<div class="col-lg-4 col-sm-4 col-xs-12 no-padding wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
 						<div class="single_address sa_two">
-							<i class="ti-mobile"></i>
-							<h4>Bilgilendirme Hattı</h4>
-							<p>(+90) 0362 397 7100</p>
+							<i class="ti-heart"></i>
+							<h4>Anonim Destek</h4>
+							<p>Kullanıcı adı veya profil bilgisi gerektirmez</p>
 						</div>
 					</div><!-- END COL -->
 					<div class="col-lg-4 col-sm-4 col-xs-12 no-padding wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
@@ -138,33 +138,42 @@
 				<div class="row">					
 					<div class="col-lg-7 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">		
 						<div class="contact">
-							<form class="form" name="enq" method="post" action="contact.php" onsubmit="return validation();">
+							<form class="form" name="enq" method="post" action="#">
 								<div class="row">
 									<div class="form-group col-md-6">
-										<label for="">Name</label>
+										<label>Ad Soyad / Kurum Adı</label>
 										<input type="text" name="name" class="form-control" required="required">
 									</div>
 									<div class="form-group col-md-6">
-										<label for="">Your Email</label>
+										<label>E-Posta Adresi</label>
 										<input type="email" name="email" class="form-control" required="required">
 									</div>
 									<div class="form-group col-md-12">
-										<label for="">Your Subject</label>
+										<label>Konu</label>
 										<input type="text" name="subject" class="form-control" required="required">
 									</div>
 									<div class="form-group col-md-12">
-										<label for="">Your Message</label>
+										<label>Mesajınız</label>
 										<textarea rows="6" name="message" class="form-control" required="required"></textarea>
 									</div>
 									<div class="col-md-12 text-center">
-										<button type="submit" value="Send message" name="submit" id="submitButton" class="btn_one" title="Submit Your Message!">Send Message</button>
+										<button type="submit" name="submit" id="submitButton" class="btn_one" title="Mesajınızı Gönderin">Mesaj Gönder</button>
 									</div>
 								</div>
 							</form>
 						</div>
 					</div><!-- END COL  -->
-					<div class="col-lg-5 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">		<div class="map">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.957183635167!2d-74.00402768559431!3d40.71895904512855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598a1316e7a7%3A0x47bb20eb6074b3f0!2sNew%20Work%20City%20-%20(CLOSED)!5e0!3m2!1sbn!2sbd!4v1600305497356!5m2!1sbn!2sbd" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					<div class="col-lg-5 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
+						<div class="single_address" style="padding:40px;">
+							<i class="ti-world"></i>
+							<h4>Türkiye Genelinde Hizmet</h4>
+							<p>
+								KidShare, Türkiye genelindeki gönüllü ve resmi dağıtım merkezleriyle
+								çocuk eşyalarının ihtiyaç sahibi ailelere güvenli ve anonim şekilde
+								ulaştırılmasını amaçlar.
+							</p>
+							<p><strong>Çalışma Mantığı:</strong> Şehir bazlı anonim eşya paylaşımı</p>
+							<p><strong>E-posta:</strong> info@kidshare.org</p>
 						</div>					
 					</div><!-- END COL  -->				
 				</div><!-- END ROW -->				
@@ -174,86 +183,25 @@
 		
 		<!-- START FOOTER -->
 		<div class="footer section-padding">
-			<div class="container">				
-				<div class="row">						
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="single_footer">
-							<a href="index.html"><img src="assets/img/logo.png" alt=""></a>         
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis dignissim.</p>
-							<div class="social_profile">
-								<ul>
-									<li><a class="f_facebook" href="#"><i class="fa-solid fa-x"></i></a></li>
-									<li><a class="f_twitter" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-									<li><a class="f_instagram"href="#"><i class="fa-brands fa-instagram"></i></a></li>
-									<li><a class="f_linkedin" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-						</div>			
-					</div><!--- END COL -->						
-					<div class="col-lg-2 col-sm-6 col-xs-12">
-						<div class="single_footer">
-							<h4>About Eduleb</h4>
-							<ul>
-								<li><a href="#">About us</a></li>
-								<li><a href="#">Instructor Registration</a></li>
-								<li><a href="#">Become A Teacher</a></li>
-								<li><a href="#">All Instrustors</a></li>
-								<li><a href="#">Asked Question</a></li>
-								<li><a href="#">Contact us</a></li>
-							</ul>
-						</div>
-					</div><!--- END COL -->	
-					<div class="col-lg-2 col-sm-6 col-xs-12">
-						<div class="single_footer">
-							<h4>Popular Courese</h4>
-							<ul>
-								<li><a href="#">Development</a></li>
-								<li><a href="#">Arts & design</a></li>
-								<li><a href="#">Visual Design</a></li>
-								<li><a href="#">Graphic Design</a></li>
-								<li><a href="#">Code Inspection</a></li>						
-								<li><a href="#">Digital Marketing</a></li>						
-							</ul>
-						</div>
-					</div><!--- END COL -->
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="single_footer">
-							<h4>Contact Info</h4>
-							<div class="sf_contact">
-								<span class="ti-map"></span>
-								<p>2570 Quadra Street Victoria Road, New York, Canada</p>
-							</div>
-							<div class="sf_contact">
-								<span class="ti-mobile"></span>
-								<p>+88 457 845 695</p>
-							</div>
-							<div class="sf_contact">
-								<span class="ti-mobile"></span>
-								<p><a href="tel:+88457845695">Contact Whatsapp</a></p>
-							</div>
-							<div class="sf_contact">
-								<span class="ti-email"></span>
-								<p>example@yourmail.com</p>
-							</div>
-						</div>
-					</div><!--- END COL -->						
-					<div class="col-lg-2 col-sm-6 col-xs-12">
-						<div class="single_footer">
-							<h4>Download App</h4>
-							<p>Download our app from app store and goole play store.</p>
-							<a href="index.html"><img src="assets/img/google-play.jpg" class="foot_img" alt=""></a>  
-							<a href="index.html"><img src="assets/img/app-store.jpg" class="foot_img" alt=""></a>  
-						</div>
-					</div><!--- END COL -->	
-				</div><!--- END ROW -->					
-			</div><!--- END CONTAINER -->
+			<div class="container">
+				<div class="single_footer text-center">
+					<h3>KidShare</h3>
+					<p>
+						KidShare, kullanılmayan çocuk kıyafetleri, oyuncaklar, kitaplar ve eğitim materyallerini
+						ihtiyaç sahibi ailelere anonim ve güvenli şekilde ulaştıran sürdürülebilir paylaşım platformudur.
+					</p>
+					<p>
+						📍 Türkiye Geneli &nbsp; | &nbsp; 📧 info@kidshare.org
+					</p>
+				</div>
+			</div>
 		</div>
-		<!-- END FOOTER -->	
+		<!-- END FOOTER -->
 
 		<!-- START FOOTER COPYRIGHT -->	
 		<div class="foot_copy">
 			<div class="footer_copyright">
-				<p>&copy; 2024. All Rights Reserved by <a href="https://bestwpware.com/">Bestwpware</a> • Distributed by <a href="https://themewagon.com">ThemeWagon</a></p>
+				<p>© 2026 KidShare | Tüm Hakları Saklıdır.</p>
 			</div>	
 		</div>
 		<!-- END FOOTER COPYRIGHT -->	
