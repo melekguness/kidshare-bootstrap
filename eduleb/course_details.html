@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="KidShare - Şehir Bazlı Anonim Çocuk Eşyası Paylaşım Platformu">
 	<meta name="keywords" content="KidShare, çocuk kıyafeti, oyuncak, kitap, bağış, paylaşım, sürdürülebilirlik">
-	<title>KidShare - Eşya Bırak</title>
+	<title>KidShare - Anonim Paylaşım Talebi</title>
 
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
@@ -70,7 +70,7 @@
 		<div class="container">
 			<div class="col-lg-10 offset-lg-1 text-center">
 				<div class="section-top-title wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
-					<h1>Eşya Bırak</h1>
+					<h1>Anonim Paylaşım Talebi</h1>
 					<ul>
 						<li><a href="index.html">Ana Sayfa</a></li>
 						<li> / Eşya Bırak</li>
@@ -86,27 +86,85 @@
 			<div class="row align-items-center">
 				<div class="col-lg-6 col-sm-12 col-xs-12">
 					<div class="ab_content">
-						<h2>Anonim Eşya Bildirim Paneli</h2>
-						<p>KidShare üzerinden çocuk kıyafeti, oyuncak, kitap, ayakkabı ve eğitim materyallerini kişisel bilgi paylaşmadan sisteme bildirebilirsiniz.</p>
-						<p><b>Kullanıcı adı veya profil bilgisi gerekmez. Bildirimler anonim olarak alınır.</b></p>
+						<h2>Anonim Paylaşım Talebi</h2>
+						<p>KidShare üzerinden kullanılabilir durumdaki çocuk ürünlerini kişisel bilgi paylaşmadan sisteme bildirebilirsiniz.</p>
+						<p><b>Paylaşım talepleri anonim olarak alınır ve uygun şehir bazlı dağıtım merkezlerine yönlendirilir.</b></p>
 						<ul>
 							<li><span class="ti-check"></span> Kişisel profil bilgisi istenmez.</li>
 							<li><span class="ti-check"></span> Ürünler şehir bazlı merkezlere bırakılır.</li>
 							<li><span class="ti-check"></span> Destek süreci anonim yürütülür.</li>
+							<li><span class="ti-check"></span> Kullanılabilir ürünler yeniden değerlendirilir.</li>
 						</ul>
 					</div>
 				</div>
+
 				<div class="col-lg-6 col-sm-12 col-xs-12">
 					<form action="#" class="contact">
-						<div class="form-group"><select class="form-control"><option>Eşya Türü Seçiniz</option><option>Bebek Giyim</option><option>Çocuk Kıyafeti</option><option>Oyuncak</option><option>Kitap</option><option>Eğitim Materyali</option><option>Ayakkabı</option></select></div>
-						<div class="form-group"><input type="number" class="form-control" placeholder="Adet Giriniz"></div>
-						<div class="form-group"><select class="form-control"><option>Teslim Noktası Seçiniz</option><option>Atakum Gönüllü Dağıtım Merkezi</option><option>Çankaya Paylaşım Noktası</option><option>Kadıköy Gönüllü Merkezi</option></select></div>
-						<button type="button" class="btn_one">Eşya Bildirimi Gönder</button>
+						<div class="form-group">
+							<select class="form-control" id="urunSec">
+								<option>Paylaşılacak Ürün Türünü Seçiniz</option>
+								<option>Bebek Giyim</option>
+								<option>Çocuk Kıyafeti</option>
+								<option>Oyuncak</option>
+								<option>Kitap</option>
+								<option>Eğitim Materyali</option>
+								<option>Ayakkabı</option>
+								<option>Bebek Bakım Ürünleri</option>
+								<option>Okul Çantası</option>
+								<option>Kırtasiye</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<input type="number" class="form-control" id="urunAdedi" placeholder="Ürün Adedi" min="1">
+						</div>
+
+						<div class="form-group">
+							<select class="form-control" id="teslimNoktasi">
+								<option>Teslim Noktası Seçiniz</option>
+								<option>Samsun / Atakum Gönüllü Dağıtım Merkezi</option>
+								<option>Ankara / Çankaya Paylaşım Noktası</option>
+								<option>İstanbul / Kadıköy Gönüllü Merkezi</option>
+								<option>İzmir / Bornova Destek Merkezi</option>
+								<option>Bursa / Nilüfer Paylaşım Noktası</option>
+								<option>Antalya / Muratpaşa Gönüllü Merkezi</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<textarea class="form-control" id="urunNotu" rows="4" placeholder="Ürün durumu veya kısa açıklama yazabilirsiniz"></textarea>
+						</div>
+
+						<button type="button" class="btn_one" onclick="kidshareBildirimGonder()">
+							Paylaşım Talebi Gönder
+						</button>
 					</form>
 				</div>
 			</div>
 		</div>
 	</section>
+	<!-- END DONATE PAGE -->
+
+	<!-- START ECO COUNTER -->
+	<section class="count_area section-padding">
+		<div class="container">
+			<div class="section-title text-center">
+				<h2>Paylaşımın Çevresel Etkisi</h2>
+				<p>Paylaşılan ürünler sayesinde oluşan karbon tasarrufu ve sosyal fayda.</p>
+			</div>
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<h5>Karbon Tasarrufu</h5>
+					<div class="progress mb-4" style="height:25px;"><div class="progress-bar bg-success" role="progressbar" style="width:75%;">356 Kg CO₂</div></div>
+					<h5>Yeniden Kullanılan Ürünler</h5>
+					<div class="progress mb-4" style="height:25px;"><div class="progress-bar bg-warning" role="progressbar" style="width:85%;">134 Ürün</div></div>
+					<h5>Desteklenen Aileler</h5>
+					<div class="progress" style="height:25px;"><div class="progress-bar bg-primary" role="progressbar" style="width:60%;">42 Aile</div></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END ECO COUNTER -->
 
 	<!-- START FOOTER -->
 	<div class="footer section-padding">
@@ -136,5 +194,30 @@
 	<script src="assets/js/scrolltopcontrol.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
+
+	<script>
+	function kidshareBildirimGonder() {
+		let urun = document.getElementById("urunSec").value;
+		let adet = document.getElementById("urunAdedi").value;
+		let teslim = document.getElementById("teslimNoktasi").value;
+
+		if (urun === "Paylaşılacak Ürün Türünü Seçiniz") {
+			alert("Lütfen paylaşmak istediğiniz ürün türünü seçiniz.");
+			return;
+		}
+
+		if (adet === "" || adet <= 0) {
+			alert("Lütfen geçerli bir ürün adedi giriniz.");
+			return;
+		}
+
+		if (teslim === "Teslim Noktası Seçiniz") {
+			alert("Lütfen teslim noktası seçiniz.");
+			return;
+		}
+
+		alert("Paylaşım talebiniz başarıyla alınmıştır. Teşekkür ederiz.");
+	}
+	</script>
 </body>
 </html>
