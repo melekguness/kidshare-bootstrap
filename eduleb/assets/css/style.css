@@ -2838,3 +2838,22 @@ font-weight: 700;
 		padding-bottom: 40px;
 	}
 }
+@media only screen and (max-width:768px){
+
+    .single_address{
+        min-height:auto !important;
+        padding:30px 20px !important;
+        margin-bottom:20px;
+    }
+
+    .single_address h4{
+        font-size:26px !important;
+        line-height:34px !important;
+    }
+
+    .single_address p{
+        font-size:16px !important;
+        line-height:28px !important;
+    }
+
+}
