@@ -2742,3 +2742,99 @@ font-weight: 700;
 * 18.END SECTION TOP DESIGN
 * ----------------------------------------------------------------------------------------
 */
+
+
+/* =========================================================
+   KidShare spacing fixes
+   Bölümler arası boşlukları dengeler.
+   ========================================================= */
+
+.section-padding {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important;
+}
+
+/* Sayfa üst başlık alanı */
+.section-top {
+	padding-top: 130px !important;
+	padding-bottom: 80px !important;
+}
+
+/* Ana içerik bölümleri */
+.top_cat__area.section-padding,
+.home_course.section-padding,
+.ab_area.section-padding,
+.blog_area.section-padding {
+	padding-top: 80px !important;
+	padding-bottom: 85px !important;
+}
+
+/* İletişim sayfası */
+.address_area.section-padding {
+	padding-top: 65px !important;
+	padding-bottom: 45px !important;
+}
+
+.contact_area.section-padding {
+	padding-top: 55px !important;
+	padding-bottom: 80px !important;
+}
+
+/* Başlık ve kart aralıkları */
+.section-title {
+	margin-bottom: 45px !important;
+}
+
+.single_tp,
+.single_course,
+.single_blog {
+	margin-bottom: 35px !important;
+}
+
+/* Footer yalnızca önceki bölümden biraz ayrı dursun */
+.footer.section-padding {
+	margin-top: 35px !important;
+	padding-top: 60px !important;
+	padding-bottom: 50px !important;
+}
+
+/* Mobilde aşırı boşluk oluşmasın */
+@media only screen and (max-width: 768px) {
+	.section-padding {
+		padding-top: 60px !important;
+		padding-bottom: 60px !important;
+	}
+
+	.section-top {
+		padding-top: 110px !important;
+		padding-bottom: 60px !important;
+	}
+
+	.footer.section-padding {
+		margin-top: 25px !important;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.cat_list ul {
+		text-align: left;
+	}
+
+	.cat_list li {
+		width: 100%;
+		margin: 0 0 15px 0;
+		display: flex;
+	}
+
+	.cat_list ul li a {
+		width: 100%;
+		justify-content: flex-start;
+	}
+
+	.single_tp {
+		margin-bottom: 25px;
+	}
+
+	.top_cat__area {
+		padding-bottom: 40px;
+	}
+}
